@@ -1,0 +1,276 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+      to right,
+      rgba(2, 82, 89, 0.9),
+      rgba(255, 255, 255, 0)
+    ),
+    url("image/background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navLogo img {
+  max-width: 70px;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.btn:hover{
+    background-color: #0657c9;
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+}
+.link:hover {
+    background-color:   aqua;
+  }
+
+.search {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.search input {
+  width: 100%;
+  font-size: 1rem;
+  color:  #00605f;
+  outline: none;
+  border: none;
+}
+
+.search input::placeholder {
+  color:  #017479;
+}
+
+.search span {
+  font-size: 1.5rem;
+  color:  #00605f;
+}
+
+.login {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color:  #00605f;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login:hover {
+  background-color: #04e343;
+}
+
+.login span {
+  padding: 5px 8px;
+  font-size: 1.5rem;
+  color:  #08d908;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+
+.destinationContainer {
+  position: relative;
+  padding: 5rem 0 5rem 5rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+
+
+.social {
+  position: absolute;
+  top: 25rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social::after {
+  position: absolute;
+  content: "";
+  top: -22rem;
+  left: 15px;
+  height: 15rem;
+  width: 2px;
+  background-color: #100e0e;
+}
+
+.social span {
+  font-size: 2rem;
+  color: #070707;
+}
+.social .ri-twitter-fill:hover{
+    background-color: aqua;
+}
+.social .ri-facebook-fill:hover{
+    background-color: aqua;
+}
+.social .ri-instagram-line:hover{
+    background-color: aqua;
+}
+.social .ri-youtube-fill:hover{
+    background-color: aqua;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.content h1 span {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+.content p {
+  max-width: 350px;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  color: #ffffff;
+}
+
+.content .btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color:  #017479;
+  cursor: pointer;
+}
+
+.destinationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.destinationCard {
+  height: 100%;
+  background-color:#ffffff;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+}
+
+.destinationCard img {
+  width: 100%;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.cardContent h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.cardContent p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color:  #0657c9;
+}
+
+.cardContent .btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  color: #ffffff;
+  background-color:  #00605f;
+  cursor: pointer;
+}
+
+@media (width < 1200px) {
+  .search {
+    max-width: 235px;
+  }
+
+  .destinationContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width < 900px) {
+  .navLinks {
+    display: none;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+  }
+
+  .destinationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .search {
+    display: none;
+  }
+
+  .destinationContainer {
+    padding-left: 3rem;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .destinationGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
